@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Dice1{
 
-   private Random randGen = new Random ( );
+   private Random r = new Random ( );
 
    public Dice1 ( ) {
 
@@ -10,7 +10,8 @@ public class Dice1{
 
    public int nextRoll( ) {
       // You supply this code.
-      return -1;
+      return r.nextInt(6) + 1;
+
    }
 
 
@@ -20,6 +21,10 @@ public class Dice1{
 	     System.out.println (nextRoll());
 	     k = k + 1;
 	  }
+   }
+
+   public static void main(String[] args) {
+      Dice1 d = new Dice1();
    }
    
   
