@@ -66,7 +66,18 @@ public class DotRace extends JPanel {
     // whose turn it is to move.
     // finish this
     private Dot whoMoves() {
- 
+        
+        int ran = (int)(Math.random()*3);
+
+        if(ran == 1) {
+            return racer0; 
+        }
+
+        else if(ran ==2) {
+            return racer1; 
+        }
+
+        return racer2; 
     }
     
     
@@ -74,6 +85,7 @@ public class DotRace extends JPanel {
     // finish this
     private int howFar() {
     
+        return (int)(Math.random()*25); 
     }
     
 
@@ -123,4 +135,8 @@ public class DotRace extends JPanel {
     }
     
     
+    public static void main(String[] args) {
+        DotRace d = new DotRace(); 
+        d.whoMoves(); 
+    }
 }  // end DotRace
